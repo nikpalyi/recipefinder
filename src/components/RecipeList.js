@@ -10,8 +10,12 @@ class RecipeList extends Component {
 
     return (
       <div>
-        {this.props.recipes.map(recipe => {
-          return <h4>{recipe.title}</h4>;
+        {this.props.recipes.map((recipe, index) => {
+          return (
+            <div key={index}>
+              <h4>{recipe.title}</h4>
+            </div>
+          );
         })}
       </div>
     );
