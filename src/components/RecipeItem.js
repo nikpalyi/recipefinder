@@ -20,11 +20,13 @@ class RecipeItem extends Component {
     let { recipe } = this.props;
 
     return (
-      <div>
-        <a href={recipe.href}>
-          <h4>{recipe.title}</h4>
-        </a>
-        <p>{recipe.ingredients}</p>
+      <div className='recipe-item'>
+        <div className='recipe-text'>
+          <a href={recipe.href}>
+            <h4>{recipe.title}</h4>
+          </a>
+          <p>{recipe.ingredients}</p>
+        </div>
         <img src={recipe.thumbnail} alt={recipe.title} className='recipe-img' />
       </div>
     );
