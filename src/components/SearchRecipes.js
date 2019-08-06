@@ -13,16 +13,28 @@ class SearchRecipes extends Component {
       <Form inline>
         <FormGroup>
           <FormLabel>Ingredients</FormLabel>{' '}
-          <FormControl type='text' placeholder='garlic, chicken' />
+          <FormControl
+            type='text'
+            placeholder='garlic, chicken'
+            onChange={event =>
+              this.setState({ ingredients: event.target.value })
+            }
+          />
         </FormGroup>{' '}
         <FormGroup>
           <FormLabel>Dish</FormLabel>{' '}
-          <FormControl type='text' placeholder='adobo' />
+          <FormControl
+            type='text'
+            placeholder='adobo'
+            onChange={event => this.setState({ dish: event.target.value })}
+          />
         </FormGroup>{' '}
-        <Button>Submit</Button>
+        <Button onClick={() => this.search()}>Submit</Button>
       </Form>
     );
   }
 }
 
 export default SearchRecipes;
+
+//The onchange event occurs when the value of an element has been changed.

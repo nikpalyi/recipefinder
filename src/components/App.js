@@ -3,6 +3,18 @@ import SearchRecipes from './SearchRecipes';
 import '../styles/index.css';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      indegrients: '',
+      dish: ''
+    };
+  }
+  search() {
+    const url = 'http://www.recipepuppy.com/api/';
+  }
+
   render() {
     return (
       <div>
