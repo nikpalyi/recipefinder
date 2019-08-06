@@ -25,6 +25,7 @@ class RecipeItem extends Component {
           <h4>{recipe.title}</h4>
         </a>
         <p>{recipe.ingredients}</p>
+        <img src={recipe.thumbnail} alt={recipe.title} className='recipe-img' />
       </div>
     );
   }
