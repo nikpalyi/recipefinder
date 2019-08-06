@@ -6,6 +6,8 @@ import {
   FormLabel,
   Button
 } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { setRecipes } from '../actions';
 
 class SearchRecipes extends Component {
   constructor() {
@@ -55,6 +57,9 @@ class SearchRecipes extends Component {
   }
 }
 
-export default SearchRecipes;
+export default connect(
+  null,
+  { setRecipes }
+)(SearchRecipes);
 
 //The onchange event occurs when the value of an element has been changed.
