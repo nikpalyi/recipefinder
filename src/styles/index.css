@@ -1,6 +1,7 @@
 body {
   text-align: center;
   padding: 5%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .recipe-item {
@@ -38,4 +39,13 @@ body {
   position: absolute;
   left: 30px;
   top: 30px;
+}
+
+.butt {
+  background-color: coral;
+  border: 1px solid coral;
+}
+
+h4 {
+  color: lightseagreen;
 }

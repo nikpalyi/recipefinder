@@ -53,7 +53,9 @@ class SearchRecipes extends Component {
             onChange={event => this.setState({ dish: event.target.value })}
           />
         </FormGroup>{' '}
-        <Button onClick={() => this.search()}>Submit</Button>
+        <Button className='butt' onClick={() => this.search()}>
+          Submit
+        </Button>
       </Form>
     );
   }
