@@ -11,6 +11,6 @@ export function setRecipes(items) {
 export function favoriteRecipe(recipe) {
   return {
     type: FAVORITE_RECIPE,
-    recipe
+    recipe //key and value are the same -> recipe: recipe
   };
 }
