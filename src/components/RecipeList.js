@@ -10,7 +10,7 @@ class RecipeList extends Component {
 
     return (
       <div>
-        {this.props.favoriteRecipes.length > 0 ? (
+        {this.props.favouriteRecipes.length > 0 ? (
           <h4 className='link'>
             <Link to='/favourites'>Favourites</Link>
           </h4>
@@ -20,7 +20,7 @@ class RecipeList extends Component {
 
         {this.props.recipes.map((recipe, index) => {
           return (
-            <RecipeItem key={index} recipe={recipe} favoriteButton={true} />
+            <RecipeItem key={index} recipe={recipe} favouriteButton={true} />
           );
         })}
       </div>

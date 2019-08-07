@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { favoriteRecipe } from '../actions';
+import { favouriteRecipe } from '../actions';
 
 class RecipeItem extends Component {
   constructor() {
     super();
 
     this.state = {
-      favorited: false
+      favourited: false
     };
   }
 
-  favorite(recipe) {
-    this.props.favoriteRecipe(recipe);
-    this.setState({ favorited: true });
+  favourite(recipe) {
+    this.props.favouriteRecipe(recipe);
+    this.setState({ favourited: true });
   }
 
   render() {
@@ -22,10 +22,10 @@ class RecipeItem extends Component {
     return (
       <div className='recipe-item'>
         {this.props.favoriteButton ? (
-          this.state.favorited ? (
+          this.state.favourited ? (
             <div className='star'>&#9733;</div>
           ) : (
-            <div className='star' onClick={() => this.favorite(recipe)}>
+            <div className='star' onClick={() => this.favourite(recipe)}>
               &#9734;
             </div>
           )
@@ -46,5 +46,5 @@ class RecipeItem extends Component {
 
 export default connect(
   null,
-  { favoriteRecipe }
+  { favouriteRecipe }
 )(RecipeItem);

@@ -1,5 +1,5 @@
 export const SET_RECIPES = 'SET_RECIPES';
-export const FAVORITE_RECIPE = 'FAVORITE_RECIPE';
+export const FAVOURITE_RECIPE = 'FAVOURITE_RECIPE';
 
 export function setRecipes(items) {
   return {
@@ -8,9 +8,9 @@ export function setRecipes(items) {
   };
 }
 
-export function favoriteRecipe(recipe) {
+export function favouriteRecipe(recipe) {
   return {
-    type: FAVORITE_RECIPE,
+    type: FAVOURITE_RECIPE,
     recipe //key and value are the same -> recipe: recipe
   };
 }

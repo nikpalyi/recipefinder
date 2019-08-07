@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import RecipeItem from './RecipeItem';
 
-class FavoriteRecipeList extends Component {
+class FavouriteRecipeList extends Component {
   render() {
     return (
       <div>
@@ -11,9 +11,9 @@ class FavoriteRecipeList extends Component {
           <Link to='/'>Home</Link>
         </h4>
         <h4>Favourite Recipes</h4>
-        {this.props.favoriteRecipes.map((recipe, index) => {
+        {this.props.favouriteRecipes.map((recipe, index) => {
           return (
-            <RecipeItem key={index} recipe={recipe} favoriteButton={false} />
+            <RecipeItem key={index} recipe={recipe} favouriteButton={false} />
           );
         })}
       </div>
@@ -23,11 +23,11 @@ class FavoriteRecipeList extends Component {
 
 function mapStateToProps(state) {
   return {
-    favoriteRecipes: state.favoriteRecipes
+    favouriteRecipes: state.favouriteRecipes
   };
 }
 
 export default connect(
   mapStateToProps,
   null
-)(FavoriteRecipeList);
+)(FavouriteRecipeList);
